@@ -16,109 +16,140 @@ html, body {
   }
   
 /* Header principal */
-/* Header principal */
 header {
-    background: linear-gradient(135deg, #4f4f4f, #2c2c2c);
-    color: white;
-    padding: 100px 20px 60px 20px;
-    text-align: center;
-    border-bottom: 4px solid #007BFF;
-    position: relative;
-    overflow: hidden;
-    background-attachment: fixed; /* Esto activa el parallax */
-    background-size: cover;
-    background-position: center;
-  }
-  
-  /* Fondo animado sutil */
-  header::before {
-    content: "";
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle at center, rgba(0, 123, 255, 0.15) 0%, transparent 70%);
-    animation: moverFondo 10s linear infinite;
-    z-index: 0;
-  }
-  
-  /* Animación del fondo (rotación lenta) */
-  @keyframes moverFondo {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-  
-  /* Contenido real del header */
-  header h1 {
-    position: relative;
-    z-index: 1;
-    font-family: 'Poppins', 'Segoe UI', sans-serif;
-    font-size: 50px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    margin: 0;
-    text-shadow: 1px 1px 8px rgba(0,0,0,0.5);
-    animation: aparecer 1.5s ease-out forwards;
-    opacity: 0;
-  }
-  
-  /* Animación de aparición */
-  @keyframes aparecer {
-    0% { opacity: 0; transform: translateY(-30px); }
-    100% { opacity: 1; transform: translateY(0); }
-  }
-  
-  /* Redes sociales en header */
-  .redes-header {
-    position: relative;
-    z-index: 1;
-    margin-top: 20px;
-  }
-  
-  .redes-header a {
-    color: white;
-    font-size: 32px;
-    margin: 0 15px;
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-  
-  .redes-header a:hover {
-    color: #25d366; /* WhatsApp */
-  }
-  
-  .redes-header a:nth-child(2):hover {
-    color: #e4405f; /* Instagram */
-  }
-  
-  
+  background: linear-gradient(135deg, #4f4f4f, #2c2c2c);
+  color: white;
+  padding: 40px 20px 30px 20px; /* Reducido */
+  text-align: center;
+  border-bottom: 4px solid #007BFF;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+
+/* Contenido real del header */
+header h1 {
+  position: relative;
+  z-index: 1;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  font-size: 36px; /* Reducido */
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin: 0;
+  text-shadow: 1px 1px 8px rgba(0,0,0,0.5);
+  animation: aparecer 1.5s ease-out forwards;
+  opacity: 0;
+}
+
+/* Animación de aparición */
+@keyframes aparecer {
+  0% { opacity: 0; transform: translateY(-30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.logo-titulo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-titulo img {
+  height: 85px; /* tamaño del logo más grande */
+  width: auto;
+}
+
+.nombre-empresa {
+  font-size: 50px;
+  font-weight: 600;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  color: white;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+}
+
+
+/* Redes sociales en header */
+.redes-header {
+  position: relative;
+  z-index: 1;
+  margin-top: 10px; /* Reducido */
+}
+
+.redes-header a {
+  color: white;
+  font-size: 28px;
+  margin: 0 15px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.redes-header a:hover {
+  color: #25d366;
+}
+
+.redes-header a:nth-child(2):hover {
+  color: #e4405f;
+}
+
+.contenedor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo img {
+  height: 60px;
+  max-width: 100%;
+}
+
+.navegacion-header {
+  display: flex;
+  gap: 15px;
+}
+
+.navegacion-header button {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.navegacion-header button:hover {
+  background-color: #007BFF;
+  color: rgb(255, 255, 255);
+  border-color: #007BFF;
+}
+
+.navegacion-header button {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 10px 22px;
+  font-size: 17px;              /* Aumentado */
+  font-weight: 600;             /* Más grueso */
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.navegacion-header button:hover {
+  background-color: #007BFF;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
   
   /* Nav principal */
-  nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #333;
-    padding: 10px 0;
-    gap: 15px;
-  }
-  
-  nav button {
-    background: #007BFF;
-    border: none;
-    color: white;
-    padding: 12px 24px;
-    font-size: 18px;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-  }
-  
-  nav button:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px);
-  }
+
   
   
   main {
@@ -366,124 +397,493 @@ header {
     font-weight: 400;
   }
 
-/* ---------------------- RESPONSIVE DESIGN ---------------------- */
+  /* Contenedor del carrusel */
+#carouselExampleIndicators {
+  max-width: 100%;
+  margin: 0;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
 
-/* Para pantallas entre 600px y 1024px (tablets) */
-@media (max-width: 1024px) {
-  
-    /* Header */
-    header {
-      padding: 80px 20px 40px 20px;
-    }
-  
-    header h1 {
-      font-size: 40px;
-    }
-  
-    /* Nav botones */
-    nav {
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-  
-    nav button {
-      padding: 10px 20px;
-      font-size: 16px;
-    }
-  
-    /* Galería */
-    .gallery {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  
-    /* Servicios */
-    .servicios-lista {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  
-    /* Contacto */
-    .contacto-contenedor {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  
-    /* Texto introducción */
-    .intro-servicios {
-      font-size: 16px;
-    }
+/* Imágenes del carrusel */
+
+
+/* Indicadores redondos y modernos */
+.carousel-indicators li {
+  background-color: #ccc;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  margin: 3px;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-indicators .active {
+  background-color: #004080;
+}
+
+/* Flechas de navegación (si deseas editarlas más adelante) */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: drop-shadow(0 0 4px #000);
+}
+
+.topbar {
+  background-color: #1b2b3a;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  padding: 8px 0;
+}
+
+.topbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.topbar .info {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-right: 20px;
+}
+
+.topbar i {
+  color: #4dabf7;
+}
+
+.redes-topbar a {
+  margin-left: 10px;
+  color: #4dabf7;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.redes-topbar a:hover {
+  color: #ffc107;
+}
+
+.trabajos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 30px;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+
+.trabajo-card {
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.trabajo-card:hover {
+  transform: translateY(-5px);
+}
+
+.trabajo-card img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+
+.trabajo-card .contenido {
+  padding: 20px;
+}
+
+.trabajo-card h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #007bff;
+}
+
+.trabajo-card p {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+#galeria h2 {
+  text-align: center;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+.cta-contenido {
+  max-width: 900px;
+  margin: 60px auto 80px auto; /* separa del carrusel y del siguiente bloque */
+  text-align: center;
+  padding: 40px 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  background-color: #f9f9f9; /* muy sutil, puedes quitarlo si quieres */
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+}
+
+.cta-contenido h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.cta-contenido p {
+  font-size: 16px;
+  font-family: 'Segoe UI', sans-serif;
+  color: #555;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.btn-agendar {
+  border: 2px solid #25d366;
+  color: #25d366;
+  padding: 12px 26px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-agendar:hover {
+  background-color: #25d366;
+  color: white;
+}
+
+
+.sobre-nosotros {
+  background-color: #f4f4f4;
+  width: 100%;
+}
+
+.card-sobre {
+  width: 100%;
+  padding: 60px 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  background-color: white;
+  border-radius: 0;
+}
+
+.contenedor-sobre {
+  max-width: 1200px;
+  margin: 0 auto; /* centra el contenido */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.sobre-img img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.sobre-texto {
+  flex: 1;
+  min-width: 300px;
+  text-align: left;
+}
+
+.sobre-texto h2 {
+  font-size: 90px;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 15px;
+  color: #007bff;
+  text-align: center;
+}
+
+.sobre-texto p {
+  font-size: 30px;
+  line-height: 1.6;
+  font-family: 'Segoe UI', sans-serif;
+  color: #444;
+}
+
+.valores-nosotros {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  font-size: 16px;
+  color: #444;
+}
+.valores-nosotros li {
+  margin-bottom: 10px;
+}
+
+/* Fondo general de la sección */
+.sobre-nosotros {
+  width: 100%;
+  background: linear-gradient(to right, #f0f4f8, #ffffff); /* Fondo elegante */
+  padding: 60px 30px;
+  position: relative;
+}
+
+/* Animación de entrada */
+.contenedor-sobre {
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
   }
-  
-  /* Para pantallas menores a 600px (celulares) */
-  @media (max-width: 600px) {
-  
-    /* Header */
-    header {
-      padding: 60px 15px 30px 15px;
-      background-attachment: scroll; /* Parallax desactivado en móvil */
-    }
-  
-    header h1 {
-      font-size: 32px;
-      line-height: 1.2;
-    }
-  
-    /* Nav */
-    nav {
-      flex-direction: column;
-      gap: 8px;
-    }
-  
-    nav button {
-      width: 80%;
-      font-size: 16px;
-      padding: 10px;
-    }
-  
-    /* Servicios */
-    .servicios-lista {
-      grid-template-columns: 1fr;
-    }
-  
-    .servicio {
-      padding: 15px;
-    }
-  
-    .servicio h3 {
-      font-size: 18px;
-    }
-  
-    .servicio p {
-      font-size: 14px;
-    }
-  
-    /* Galería */
-    .gallery {
-      grid-template-columns: 1fr;
-    }
-  
-    .gallery img {
-      height: 250px;
-    }
-  
-    /* Contacto */
-    .contacto-contenedor {
-      grid-template-columns: 1fr;
-    }
-  
-    /* Texto introductorio */
-    .intro-servicios {
-      font-size: 16px;
-      padding: 0 10px;
-    }
-  
-    /* Footer */
-    footer {
-      font-size: 12px;
-      padding: 10px;
-    }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  
-  
+}
+
+/* Tarjeta visual */
+.card-sobre {
+  background: rgba(255, 255, 255, 0.85); /* Efecto glass suave */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px); /* Para Safari */
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Layout de contenido */
+.contenedor-sobre {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+  justify-content: center;
+}
+
+/* Imagen */
+.sobre-img img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Texto */
+.sobre-texto {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Título con subrayado */
+.sobre-texto h2 {
+  font-size: 45px;
+  font-family: 'Poppins', sans-serif;
+  color: #007BFF;
+  margin-bottom: 20px;
+  position: relative;
+  text-align: left;
+}
+
+.sobre-texto h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: #007BFF;
+  border-radius: 2px;
+}
+
+/* Párrafos */
+.sobre-texto p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 16px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+
+@media (max-width: 768px) {
+  header h1, .nombre-empresa {
+    font-size: clamp(20px, 6vw, 32px);
+  }
+
+  .logo-titulo img {
+    height: 60px;
+  }
+
+  .topbar-content, .contenedor-header, .navegacion-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .navegacion-header {
+    flex-wrap: wrap;
+  }
+
+  .navegacion-header button {
+    padding: 10px 16px;
+    font-size: 15px;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .servicios-lista {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery img, .trabajo-card img {
+    height: auto;
+    max-height: 300px;
+  }
+
+  .trabajos-grid {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .sobre-texto h2 {
+    font-size: clamp(20px, 7vw, 32px);
+    text-align: center;
+  }
+
+  .sobre-texto p {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .contenedor-sobre {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+
+  .cta-contenido h2 {
+    font-size: 22px;
+  }
+
+  .cta-contenido p {
+    font-size: 15px;
+  }
+
+  .btn-agendar {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .contacto-contenedor {
+    grid-template-columns: 1fr;
+  }
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+}
+
+.sobre-nosotros, .card-sobre, .contenedor-sobre {
+  padding: 20px !important;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contenedor-sobre {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.sobre-texto {
+  min-width: auto;
+  width: 100%;
+  padding: 0 10px;
+}
+
+.sobre-texto h2 {
+  font-size: clamp(20px, 6vw, 32px);
+  text-align: center;
+}
+
+.sobre-texto p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  #carouselExampleIndicators {
+    margin: 0 auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  #carouselExampleIndicators .carousel-inner img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: 400px !important;
+    object-fit: cover !important;
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   
